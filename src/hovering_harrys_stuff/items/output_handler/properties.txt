@@ -1,0 +1,8 @@
+"Properties" {
+	"Authors" "Hovering Harry"
+	"Description" "This item only takes an input with a value parameter then outputs if that parameter matches the value determined by this item's timer. This item does not deactivate. "
+	"Icon"
+	{
+		"0" "beepkg/output_handler.png"
+	}
+}

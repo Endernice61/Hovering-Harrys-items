@@ -1,0 +1,8 @@
+"Properties" {
+	"Authors" "Hovering Harry"
+	"Description" "When this item is activated, this item sends an activation output. Check Start Reversed to have it send a deactivation output instead. "
+	"Icon"
+	{
+		"0" "beepkg/logic_relay.png"
+	}
+}

@@ -1,0 +1,8 @@
+"Properties" {
+	"Authors" "Hovering Harry"
+	"Description" " This item needs to recieve an input to be enabled, once enabled it cannot be disabled. Needs to be outputted to an output handler (provided by this ucp) or a similar item. 3 seconds for crouching, 4 for uncrouching, 5 for jumping, 6 for placing blue portals, 7 for placing orange portals. "
+	"Icon"
+	{
+		"0" "beepkg/logic_playerproxy.png"
+	}
+}

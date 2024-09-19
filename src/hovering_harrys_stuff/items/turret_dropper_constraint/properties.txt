@@ -1,0 +1,8 @@
+"Properties" {
+	"Authors" "Hovering Harry"
+	"Description" "Place on a surface to prevent the turret from jumping after it is let go"
+	"Icon"
+	{
+		"0" "hovering_harry/turret_dropper_constraint.png"
+	}
+}

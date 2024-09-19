@@ -1,0 +1,8 @@
+"Properties" {
+	"Authors" "Hovering Harry"
+	"Description" "This item outputs the value determined by this item's timer when triggered. "
+	"Icon"
+	{
+		"0" "beepkg/input_handler.png"
+	}
+}
