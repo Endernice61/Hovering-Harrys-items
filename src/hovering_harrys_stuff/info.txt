@@ -81,18 +81,6 @@
 		}
 	}
 }
-//"Item"
-//{
-//	"ID"  "INPUT_HANDLER"
-//	//"all_conf"	"input_handler"
-//	"Version"
-//	{
-//		"Styles"
-//		{
-//			"ANY_STYLE" "input_handler"
-//		}
-//	}
-//}
 "Item"
 {
 	"ID"  "ROTATING_ASHPD"
@@ -135,17 +123,6 @@
 		"Styles"
 		{
 			"ANY_STYLE" "hammer_item"
-		}
-	}
-}
-"Item"
-{
-	"ID"  "TURRET_DROPPER_CONSTRAINT"
-	"Version"
-	{
-		"Styles"
-		{
-			"ANY_STYLE" "turret_dropper_constraint"
 		}
 	}
 }
