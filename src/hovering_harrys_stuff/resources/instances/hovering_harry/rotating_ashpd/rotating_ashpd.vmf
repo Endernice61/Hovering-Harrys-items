@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "9672"
-	"mapversion" "793"
+	"mapversion" "803"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -26,7 +26,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "793"
+	"mapversion" "803"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -120,6 +120,249 @@ world
 			"visgroupshown" "1"
 			"visgroupautoshown" "1"
 		}
+	}
+}
+entity
+{
+	"id" "82018"
+	"classname" "filter_activator_name"
+	"Negated" "Allow entities that match criteria"
+	"targetname" "nameless_filter"
+	"origin" "24 24 8"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 12000]"
+	}
+}
+entity
+{
+	"id" "82028"
+	"classname" "filter_activator_class"
+	"filterclass" "weapon_portalgun"
+	"Negated" "Allow entities that match criteria"
+	"targetname" "weapon_portalgun_filter"
+	"origin" "40 24 8"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 12000]"
+	}
+}
+entity
+{
+	"id" "82044"
+	"classname" "func_noportal_volume"
+	"spawnflags" "0"
+	connections
+	{
+		"OnPressed" "place_gunTrigger0-1"
+		"OnPressed" "pedestal_gun_pickupTrigger0-1"
+	}
+	solid
+	{
+		"id" "82045"
+		side
+		{
+			"id" "10046"
+			"plane" "(-16 -16 -56) (-16 16 -56) (16 16 -56)"
+			"material" "TOOLS/TOOLSINVISIBLE"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10045"
+			"plane" "(-16 16 -62) (-16 -16 -62) (16 -16 -62)"
+			"material" "TOOLS/TOOLSINVISIBLE"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10044"
+			"plane" "(-16 -16 -62) (-16 16 -62) (-16 16 -56)"
+			"material" "TOOLS/TOOLSINVISIBLE"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10043"
+			"plane" "(16 16 -62) (16 -16 -62) (16 -16 -56)"
+			"material" "TOOLS/TOOLSINVISIBLE"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10042"
+			"plane" "(-16 16 -62) (16 16 -62) (16 16 -56)"
+			"material" "TOOLS/TOOLSINVISIBLE"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10041"
+			"plane" "(16 -16 -62) (-16 -16 -62) (-16 -16 -56)"
+			"material" "TOOLS/TOOLSINVISIBLE"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"comments" "Locks when the pedestal rotates otherwise using it causes it to permanently press"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "82081"
+	"classname" "filter_multi"
+	"Filter01" "nameless_filter"
+	"Filter02" "weapon_portalgun_filter"
+	"filtertype" "0"
+	"Negated" "Allow entities that match criteria"
+	"targetname" "nameless_pgun_filter"
+	"origin" "56 24 8"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 12000]"
+	}
+}
+entity
+{
+	"id" "82102"
+	"classname" "trigger_multiple"
+	"filtername" "nameless_pgun_filter"
+	"origin" "0 0 -16"
+	"spawnflags" "4104"
+	"StartDisabled" "1"
+	"targetname" "orphan_gun_remover"
+	"wait" "0"
+	connections
+	{
+		"OnStartTouch" "!activatorKill0-1"
+	}
+	solid
+	{
+		"id" "82103"
+		side
+		{
+			"id" "10058"
+			"plane" "(-8 -8 -8) (-8 8 -8) (8 8 -8)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10057"
+			"plane" "(-8 8 -24) (-8 -8 -24) (8 -8 -24)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10056"
+			"plane" "(-8 -8 -24) (-8 8 -24) (-8 8 -8)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10055"
+			"plane" "(8 8 -24) (8 -8 -24) (8 -8 -8)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10054"
+			"plane" "(-8 8 -24) (8 8 -24) (8 8 -8)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10053"
+			"plane" "(8 -8 -24) (-8 -8 -24) (-8 -8 -8)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"comments" "Locks when the pedestal rotates otherwise using it causes it to permanently press"
+		"logicalpos" "[0 1000]"
 	}
 }
 entity
@@ -285,18 +528,20 @@ entity
 	"targetname" "pedestal_gun_pickup"
 	connections
 	{
-		"OnTrigger" "place_gunEnable0-1"
+		"OnTrigger" "portal_gunEnable0-1"
 		"OnTrigger" "pedestal_return_blue3Trigger0-1"
 		"OnTrigger" "pedestal_return_red3Trigger0-1"
 		"OnTrigger" "pedestal_gunKill0-1"
 		"OnTrigger" "!selfDisable0-1"
 		"OnTrigger" "pedestal_gun_retrieve_spawnerForceSpawn0-1"
-		"OnTrigger" "pedestal_fire_blue_playsoundDisable0-1"
-		"OnTrigger" "pedestal_fire_red_playsoundDisable0-1"
+		"OnTrigger" "pedestal_fire_playsoundDisable0-1"
 		"OnTrigger" "pedestal_gun_retrieveSetParentpedestal_gun_physbox0.01-1"
 		"OnTrigger" "pedestal_gun_physboxKill0.05-1"
 		"OnTrigger" "portal_gun_returnerDisable0.05-1"
 		"OnTrigger" "portal_gun_returnerEnable0.03-1"
+		"OnTrigger" "orphan_gun_removerEnable0.01-1"
+		"OnTrigger" "orphan_gun_removerDisable0.03-1"
+		"OnTrigger" "place_gunEnable0-1"
 	}
 	"origin" "0 0 24"
 	editor
@@ -369,34 +614,14 @@ entity
 }
 entity
 {
-	"id" "81821"
-	"classname" "logic_relay"
-	"spawnflags" "0"
-	"StartDisabled" "0"
-	"targetname" "pedestal_fire_blue_playsound"
-	connections
-	{
-		"OnTrigger" "pedestal_fire_bluePlaySound0-1"
-	}
-	"origin" "-48 -16 -48"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 12500]"
-	}
-}
-entity
-{
 	"id" "81824"
 	"classname" "logic_relay"
 	"spawnflags" "0"
 	"StartDisabled" "0"
-	"targetname" "pedestal_fire_red_playsound"
+	"targetname" "pedestal_fire_playsound"
 	connections
 	{
-		"OnTrigger" "pedestal_fire_redPlaySound0-1"
+		"OnTrigger" "pedestal_firePlaySound0-1"
 	}
 	"origin" "-48 16 -48"
 	editor
@@ -566,38 +791,6 @@ hidden
 }
 entity
 {
-	"id" "81092"
-	"classname" "ambient_generic"
-	"cspinup" "0"
-	"fadeinsecs" "0"
-	"fadeoutsecs" "0"
-	"health" "0"
-	"lfomodpitch" "0"
-	"lfomodvol" "0"
-	"lforate" "0"
-	"lfotype" "0"
-	"message" "Weapon_Portalgun.fire_blue"
-	"pitch" "100"
-	"pitchstart" "100"
-	"preset" "0"
-	"radius" "1250"
-	"SourceEntityName" "pedestal_gun"
-	"spawnflags" "48"
-	"spindown" "0"
-	"spinup" "0"
-	"targetname" "pedestal_fire_blue"
-	"volstart" "0"
-	"origin" "-48 -16 -64"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 12500]"
-	}
-}
-entity
-{
 	"id" "79802"
 	"classname" "prop_dynamic"
 	"angles" "0 180 0"
@@ -682,7 +875,7 @@ entity
 	"lfomodvol" "0"
 	"lforate" "0"
 	"lfotype" "0"
-	"message" "Weapon_Portalgun.fire_red"
+	"message" "$sound"
 	"pitch" "100"
 	"pitchstart" "100"
 	"preset" "0"
@@ -691,7 +884,7 @@ entity
 	"spawnflags" "48"
 	"spindown" "0"
 	"spinup" "0"
-	"targetname" "pedestal_fire_red"
+	"targetname" "pedestal_fire"
 	"volstart" "0"
 	"origin" "-48 16 -64"
 	editor
@@ -964,7 +1157,7 @@ entity
 	connections
 	{
 		"OnTrigger" "pedestal_gunFirePortal10-1"
-		"OnTrigger" "pedestal_fire_blue_playsoundTrigger0-1"
+		"OnTrigger" "pedestal_fire_playsoundTrigger0-1"
 	}
 	"origin" "8 8 56"
 	editor
@@ -985,7 +1178,7 @@ entity
 	connections
 	{
 		"OnTrigger" "pedestal_gunFirePortal20-1"
-		"OnTrigger" "pedestal_fire_red_playsoundTrigger0-1"
+		"OnTrigger" "pedestal_fire_playsoundTrigger0-1"
 	}
 	"origin" "-8 8 56"
 	editor
@@ -1168,8 +1361,7 @@ entity
 	{
 		"OnTrigger" "pedestal_gunKill0-1"
 		"OnTrigger" "place_gunEnable0-1"
-		"OnTrigger" "pedestal_fire_blue_playsoundDisable0-1"
-		"OnTrigger" "pedestal_fire_red_playsoundDisable0-1"
+		"OnTrigger" "pedestal_fire_playsoundDisable0-1"
 		"OnTrigger" "pedestal_gun_pickupDisable0-1"
 		"OnTrigger" "output_handlerSetValue50-1"
 		"OnTrigger" "output_handlerSetValue60-1"
@@ -1258,7 +1450,7 @@ entity
 		"OnTrigger" "place_gunDisable0-1"
 		"OnTrigger" "@portal_gun_stateInValue30-1"
 		"OnTrigger" "pedestal_gun_pickupEnable0-1"
-		"OnTrigger" "pedestal_fire_red_playsoundEnable0-1"
+		"OnTrigger" "pedestal_fire_playsoundEnable0-1"
 	}
 	"origin" "24 8 24"
 	editor
@@ -1285,7 +1477,7 @@ entity
 		"OnTrigger" "place_gunDisable0-1"
 		"OnTrigger" "@portal_gun_stateInValue10-1"
 		"OnTrigger" "pedestal_gun_pickupEnable0-1"
-		"OnTrigger" "pedestal_fire_blue_playsoundEnable0-1"
+		"OnTrigger" "pedestal_fire_playsoundEnable0-1"
 	}
 	"origin" "24 -8 24"
 	editor
