@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "9672"
-	"mapversion" "803"
+	"mapversion" "810"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,13 +20,13 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
-	"nGridSpacing" "8"
+	"nGridSpacing" "16"
 	"bShow3DGrid" "0"
 }
 world
 {
 	"id" "1"
-	"mapversion" "803"
+	"mapversion" "810"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -124,11 +124,17 @@ world
 }
 entity
 {
-	"id" "82018"
-	"classname" "filter_activator_name"
-	"Negated" "Allow entities that match criteria"
-	"targetname" "nameless_filter"
-	"origin" "24 24 8"
+	"id" "82207"
+	"classname" "env_entity_maker"
+	"angles" "0 180 0"
+	"EntityTemplate" "pedestal_gun_template"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0.15"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "pedestal_gun_spawner"
+	"origin" "12 0 -146"
 	editor
 	{
 		"color" "220 30 220"
@@ -137,20 +143,24 @@ entity
 		"logicalpos" "[0 12000]"
 	}
 }
-entity
+hidden
 {
-	"id" "82028"
-	"classname" "filter_activator_class"
-	"filterclass" "weapon_portalgun"
-	"Negated" "Allow entities that match criteria"
-	"targetname" "weapon_portalgun_filter"
-	"origin" "40 24 8"
-	editor
+	entity
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 12000]"
+		"id" "82028"
+		"classname" "filter_activator_class"
+		"filterclass" "weapon_portalgun"
+		"Negated" "Allow entities that match criteria"
+		"targetname" "weapon_portalgun_filter"
+		"origin" "24 24 8"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupid" "11"
+			"visgroupshown" "0"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 12000]"
+		}
 	}
 }
 entity
@@ -248,121 +258,110 @@ entity
 		"logicalpos" "[0 1000]"
 	}
 }
-entity
+hidden
 {
-	"id" "82081"
-	"classname" "filter_multi"
-	"Filter01" "nameless_filter"
-	"Filter02" "weapon_portalgun_filter"
-	"filtertype" "0"
-	"Negated" "Allow entities that match criteria"
-	"targetname" "nameless_pgun_filter"
-	"origin" "56 24 8"
-	editor
+	entity
 	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 12000]"
-	}
-}
-entity
-{
-	"id" "82102"
-	"classname" "trigger_multiple"
-	"filtername" "nameless_pgun_filter"
-	"origin" "0 0 -16"
-	"spawnflags" "4104"
-	"StartDisabled" "1"
-	"targetname" "orphan_gun_remover"
-	"wait" "0"
-	connections
-	{
-		"OnStartTouch" "!activatorKill0-1"
-	}
-	solid
-	{
-		"id" "82103"
-		side
+		"id" "82102"
+		"classname" "trigger_multiple"
+		"filtername" "weapon_portalgun_filter"
+		"origin" "0 0 -16"
+		"spawnflags" "4104"
+		"StartDisabled" "1"
+		"targetname" "orphan_gun_remover"
+		"wait" "0"
+		connections
 		{
-			"id" "10058"
-			"plane" "(-8 -8 -8) (-8 8 -8) (8 8 -8)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[1 0 0 0] 0.25"
-			"vaxis" "[0 -1 0 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
+			"OnStartTouch" "!activatorKill0-1"
 		}
-		side
+		hidden
 		{
-			"id" "10057"
-			"plane" "(-8 8 -24) (-8 -8 -24) (8 -8 -24)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[1 0 0 0] 0.25"
-			"vaxis" "[0 -1 0 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "10056"
-			"plane" "(-8 -8 -24) (-8 8 -24) (-8 8 -8)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[0 1 0 0] 0.25"
-			"vaxis" "[0 0 -1 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "10055"
-			"plane" "(8 8 -24) (8 -8 -24) (8 -8 -8)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[0 1 0 0] 0.25"
-			"vaxis" "[0 0 -1 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "10054"
-			"plane" "(-8 8 -24) (8 8 -24) (8 8 -8)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[1 0 0 0] 0.25"
-			"vaxis" "[0 0 -1 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "10053"
-			"plane" "(8 -8 -24) (-8 -8 -24) (-8 -8 -8)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[1 0 0 0] 0.25"
-			"vaxis" "[0 0 -1 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
+			solid
+			{
+				"id" "82103"
+				side
+				{
+					"id" "10058"
+					"plane" "(-8 -8 -8) (-8 8 -8) (8 8 -8)"
+					"material" "TOOLS/TOOLSTRIGGER"
+					"uaxis" "[1 0 0 0] 0.25"
+					"vaxis" "[0 -1 0 0] 0.25"
+					"rotation" "0"
+					"lightmapscale" "16"
+					"smoothing_groups" "0"
+				}
+				side
+				{
+					"id" "10057"
+					"plane" "(-8 8 -24) (-8 -8 -24) (8 -8 -24)"
+					"material" "TOOLS/TOOLSTRIGGER"
+					"uaxis" "[1 0 0 0] 0.25"
+					"vaxis" "[0 -1 0 0] 0.25"
+					"rotation" "0"
+					"lightmapscale" "16"
+					"smoothing_groups" "0"
+				}
+				side
+				{
+					"id" "10056"
+					"plane" "(-8 -8 -24) (-8 8 -24) (-8 8 -8)"
+					"material" "TOOLS/TOOLSTRIGGER"
+					"uaxis" "[0 1 0 0] 0.25"
+					"vaxis" "[0 0 -1 0] 0.25"
+					"rotation" "0"
+					"lightmapscale" "16"
+					"smoothing_groups" "0"
+				}
+				side
+				{
+					"id" "10055"
+					"plane" "(8 8 -24) (8 -8 -24) (8 -8 -8)"
+					"material" "TOOLS/TOOLSTRIGGER"
+					"uaxis" "[0 1 0 0] 0.25"
+					"vaxis" "[0 0 -1 0] 0.25"
+					"rotation" "0"
+					"lightmapscale" "16"
+					"smoothing_groups" "0"
+				}
+				side
+				{
+					"id" "10054"
+					"plane" "(-8 8 -24) (8 8 -24) (8 8 -8)"
+					"material" "TOOLS/TOOLSTRIGGER"
+					"uaxis" "[1 0 0 0] 0.25"
+					"vaxis" "[0 0 -1 0] 0.25"
+					"rotation" "0"
+					"lightmapscale" "16"
+					"smoothing_groups" "0"
+				}
+				side
+				{
+					"id" "10053"
+					"plane" "(8 -8 -24) (-8 -8 -24) (-8 -8 -8)"
+					"material" "TOOLS/TOOLSTRIGGER"
+					"uaxis" "[1 0 0 0] 0.25"
+					"vaxis" "[0 0 -1 0] 0.25"
+					"rotation" "0"
+					"lightmapscale" "16"
+					"smoothing_groups" "0"
+				}
+				editor
+				{
+					"color" "220 30 220"
+					"visgroupshown" "0"
+					"visgroupautoshown" "1"
+				}
+			}
 		}
 		editor
 		{
 			"color" "220 30 220"
-			"visgroupshown" "1"
+			"visgroupid" "11"
+			"visgroupshown" "0"
 			"visgroupautoshown" "1"
+			"comments" "Locks when the pedestal rotates otherwise using it causes it to permanently press"
+			"logicalpos" "[0 1000]"
 		}
-	}
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"comments" "Locks when the pedestal rotates otherwise using it causes it to permanently press"
-		"logicalpos" "[0 1000]"
 	}
 }
 entity
@@ -845,15 +844,11 @@ entity
 entity
 {
 	"id" "79811"
-	"classname" "env_entity_maker"
+	"classname" "point_teleport"
 	"angles" "0 180 0"
-	"EntityTemplate" "pedestal_gun_template"
-	"PostSpawnDirection" "0 0 0"
-	"PostSpawnDirectionVariance" "0.15"
-	"PostSpawnInheritAngles" "0"
-	"PostSpawnSpeed" "0"
 	"spawnflags" "0"
-	"targetname" "pedestal_gun_spawner"
+	"target" "pedestal_gun"
+	"targetname" "pedestal_gun_teleporter"
 	"origin" "12 0 -18"
 	editor
 	{
@@ -1077,7 +1072,8 @@ entity
 	connections
 	{
 		"OnTrigger" "pedestal_gun_spawnerForceSpawn0-1"
-		"OnTrigger" "pedestal_gunSetParentpedestal0.01-1"
+		"OnTrigger" "pedestal_gunSetParentpedestal0.03-1"
+		"OnTrigger" "pedestal_gun_teleporterTeleportToCurrentPos0.01-1"
 	}
 	"origin" "8 -8 56"
 	editor
@@ -1116,6 +1112,8 @@ entity
 		"OnTrigger" "pedestal_activate_gunEnable3-1"
 		"OnTrigger" "pedestal_placeLock0-1"
 		"OnTrigger" "pedestal_placeUnlock3.05-1"
+		"OnTrigger" "pedestal_gun_teleporterSetParentpedestal_rotate0-1"
+		"OnTrigger" "pedestal_gun_teleporterClearParent3-1"
 	}
 	"origin" "8 -8 40"
 	editor
