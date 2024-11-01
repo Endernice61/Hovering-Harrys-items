@@ -3,6 +3,6 @@
 	"Description" "Enables cube physics every tenth of a second"
 	"Icon"
 	{
-		"0" "beepkg/cube_funnel.png"
+		"0" "hovering_harry/cube_physics_enabler.png"
 	}
 }

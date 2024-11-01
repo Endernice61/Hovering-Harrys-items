@@ -11,7 +11,7 @@
 			"Palette"
 			{
 				"Tooltip"		"CUBE PHYSICS_ENABLER"
-				"Image"			"palette/beepkg/cube_funnel.png"
+				"Image"			"palette/hovering_harry/cube_physics_enabler.png"
 				"Position"		"4 2 0"
 			}
 			"Sounds"
