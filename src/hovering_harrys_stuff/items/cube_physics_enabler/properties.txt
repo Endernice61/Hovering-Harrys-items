@@ -1,0 +1,8 @@
+"Properties" {
+	"Authors" "Hovering Harry"
+	"Description" "Enables cube physics every tenth of a second"
+	"Icon"
+	{
+		"0" "beepkg/cube_funnel.png"
+	}
+}
