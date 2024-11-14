@@ -8,6 +8,8 @@ This ucp adds:
 
 -Drop gun logic +signage
 
+-Face remover
+
 -logic_playerproxy
 
 -Cube physics enabler
