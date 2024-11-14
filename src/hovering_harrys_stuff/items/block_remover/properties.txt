@@ -1,0 +1,12 @@
+"Properties" {
+	"Authors" "Hovering Harry"
+	"Description" {
+		"" "Cuts out the face of a wall. **CAUSES LEAKS**"
+		"" ""
+		"" ""
+		}
+	"Icon"
+	{
+		"0" "clean/portalgun.png"
+	}
+}
