@@ -1,8 +1,0 @@
-"Properties" {
-	"Authors" "Hovering Harry"
-	"Description" "While activated, shows the keybind to crouch. "
-	"Icon"
-	{
-		"0" "beepkg/env_instructor_hint.png"
-	}
-}
