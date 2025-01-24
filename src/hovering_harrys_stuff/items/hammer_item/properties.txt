@@ -1,8 +1,0 @@
-"Properties" {
-	"Authors" "Hovering Harry"
-	"Description" "Stuff for a map "
-	"Icon"
-	{
-		"0" "beepkg/output_handler.png"
-	}
-}
