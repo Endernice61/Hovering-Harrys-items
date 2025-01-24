@@ -59,17 +59,6 @@
 		}
 	}
 }
-"Item"
-{
-	"ID"  "ITEM_DELAYER_HARRY"
-	"Version"
-	{
-		"Styles"
-		{
-			"ANY_STYLE" "delayer_harry"
-		}
-	}
-}
 "Signage"
 {
     "ID" "SIGN_TURRET_FIZZLE"
