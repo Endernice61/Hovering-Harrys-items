@@ -153,6 +153,20 @@
     }
 }
 
+"Signage"
+{
+    "ID" "SIGN_TIMER_256"
+    "Name" "Timer 256x256"
+    "Styles"
+    {
+        "BEE2_CLEAN"
+        {
+            "overlay" "BEE2/signage/hovering_harry/timer_256"//Material location
+            "icon" "items/clean/signage/hovering_harry/timer_256.png"
+        }
+    }
+}
+
 "Item"
 {
 	"ID" "ITEM_BEE2_TURRET_DROPPER_BETTER"
