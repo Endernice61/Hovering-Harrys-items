@@ -1,6 +1,6 @@
 LightmappedGeneric
 	{
-	$basetexture "BEE2/signage/hovering_harry/no_timer_256"
+	$basetexture "BEE2/signage/hovering_harry/timer_256"
 	$surfaceprop glass
 	$selfillum 1
 	%noportal 1
