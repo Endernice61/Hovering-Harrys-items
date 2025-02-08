@@ -48,17 +48,6 @@
 		}
 	}
 }
-"Item"
-{
-	"ID"  "ITEM_CUBE_PHYSICS_ENABLER"
-	"Version"
-	{
-		"Styles"
-		{
-			"ANY_STYLE" "cube_physics_enabler"
-		}
-	}
-}
 "Signage"
 {
     "ID" "SIGN_TURRET_FIZZLE"
