@@ -1,13 +1,9 @@
 This ucp adds:
 
--logic_playerproxy
+- logic_playerproxy
 
--Cube physics enabler
+- Cube funnel
 
--Cube funnel
+- Exclamation, Cube on pedestal, Sendificator and Reset signage
 
--Exclamation, Cube on pedestal, Sendificator and Reset signage
-
-And also...
-
--Portal restrictor
+- Portal restrictor
