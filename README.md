@@ -1,5 +1,7 @@
 This ucp adds:
 
+- Widget to enable automatic half wall placement on portal magnets
+
 - logic_playerproxy
 
 - Cube funnel
