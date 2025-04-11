@@ -1,0 +1,56 @@
+"Item"
+{
+	"Type"		"ITEM_VBSP_HARRYS_STUFF"
+	"Editor"
+	{
+		"SubType"
+		{
+			"Name"  "Vbsp config"
+			"Model" "error.3ds"
+			"Palette"
+			{
+				"Tooltip"		"VBSP"
+				"Image"			"palette/error.png"
+				"Position"		"4 2 0"
+			}
+			"Sounds"
+			{
+			"SOUND_CREATED"			"P2Editor.PlaceOther"
+			"SOUND_EDITING_ACTIVATE"	"P2Editor.ExpandOther"
+			"SOUND_EDITING_DEACTIVATE"	"P2Editor.CollapseOther"
+			"SOUND_DELETED"			"P2Editor.RemoveOther"
+			}
+			"Animations"
+			{
+				"ANIM_IDLE"			"0"
+				"ANIM_EDITING_ACTIVATE"		"1"
+				"ANIM_EDITING_DEACTIVATE"	"2"
+			}
+		}
+		"MovementHandle"		"HANDLE_NONE"
+	}
+	"Properties"
+	{
+	}
+	"Exporting"
+	{
+		"Instances"
+		{
+			"0"
+			{
+				"Name"				"instances/BEE2/logic/vbsp.vmf"
+				"EntityCount"		"0"
+				"BrushCount"		"0"
+				"BrushSideCount"	"0"
+			}
+		}
+		"TargetName"		""
+		"Inputs"
+		{
+		}
+		"Outputs"
+		{
+		}
+		"Offset"		"64 64 64"
+	}
+}
