@@ -6,7 +6,7 @@ This ucp adds:
 
 - Cube funnel
 
-- Exclamation, Cube on pedestal, Sendificator and Reset signage
+- Exclamation, Cube on pedestal, higher resolution Timer signage, No timer signage, Sendificator and Reset signage
 
 - Portal restrictor
 
