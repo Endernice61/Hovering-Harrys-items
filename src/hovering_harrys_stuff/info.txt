@@ -42,7 +42,7 @@
 }
 "Item"
 {
-	"ID"  "LOGIC_PLAYERPROXY"
+	"ID"  "ITEM_LOGIC_PLAYERPROXY"
 	"Version"
 	{
 		"Styles"
@@ -51,18 +51,18 @@
 		}
 	}
 }
-"Item"
-{
-	"ID"  "OUTPUT_HANDLER"
+//"Item"
+//{
+//	"ID"  "OUTPUT_HANDLER"
 	//"all_conf"	"output_handler"
-	"Version"
-	{
-		"Styles"
-		{
-			"ANY_STYLE" "output_handler"
-		}
-	}
-}
+//	"Version"
+//	{
+//		"Styles"
+//		{
+//			"ANY_STYLE" "output_handler"
+//		}
+//	}
+//}
 "Item"
 {
 	"ID"  "ITEM_VBSP_HARRYS_STUFF"
