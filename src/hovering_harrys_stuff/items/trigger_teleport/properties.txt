@@ -1,8 +1,0 @@
-"Properties" {
-	"Authors" "Hovering Harry"
-	"Description" "NOT FUNCTIONAL When a player enters, they are teleported to "
-	"Icon"
-	{
-		"0" "beepkg/cube_funnel.png"
-	}
-}
