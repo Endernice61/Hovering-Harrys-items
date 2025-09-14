@@ -2,6 +2,8 @@ This ucp adds:
 
 - Widget to enable automatic half wall placement on portal magnets
 
+- Laser item, which combines the laser emitter, receiver and relay into one item
+
 - logic_playerproxy
 
 - Cube funnel
