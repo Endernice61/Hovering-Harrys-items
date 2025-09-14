@@ -1,0 +1,253 @@
+"Item"
+	{
+	"Type"		"ITEM_LASER_ITEM_CENTER"
+	"ItemClass"	"ItemButtonFloor"
+	"Editor"
+		{
+		"SubType"
+			{
+			"Name"  "Laser Item"
+			"Model" "bee2/clean/laseritem/laseremitc.3ds"
+			"Palette"
+				{
+				"Tooltip"	"PORTAL2_PuzzleEditor_Palette_laser_emitter"
+				"Image"		"palette/laser_emitter.png"
+				}
+			}
+		// Additional dummies, so swapping works.
+		"SubType"
+			{
+			"Name"  "Laser Item"
+			"Model" "laseremitc.3ds"
+			}
+		"SubType"
+			{
+			"Name"  "Laser Item"
+			"Model" "laseremitc.3ds"
+			}
+		"SubType"
+			{
+			"Name"  "Laser Item"
+			"Model" "laseremitc.3ds"
+			}
+		"SubType"
+			{
+			"Name"  "Laser Item"
+			"Model" "laseremitc.3ds"
+			}
+		"MovementHandle"		"HANDLE_8_POSITIONS"
+		}
+	"Properties"
+		{
+		"ConnectionCount"
+			{
+			"DefaultValue"		"0"
+			"Index"		"1"
+			}
+		"CubeType"
+			{
+			"DefaultValue" "0"
+			"Index" "2"
+			}
+		"StartEnabled"
+			{
+			"DefaultValue"		"1"
+			"Index"		"3"
+			}
+		"ButtonType"
+			{
+			"DefaultValue"		"1"
+			"Index"		"4"
+			}
+		}
+	"Exporting"
+		{
+		"Instances"
+			{
+			"0"
+				{
+				"Name"				"instances/BEE2/logic/laser_emitter_center.vmf"
+				"EntityCount"		"9"
+				"BrushCount"		"5"
+				"BrushSideCount"	"34"
+				}
+			"1"
+				{
+				"Name"				"instances/BEE2/logic/laser_emitter_center.vmf"
+				"EntityCount"		"9"
+				"BrushCount"		"5"
+				"BrushSideCount"	"34"
+				}
+			"2"
+				{
+				"Name"				"instances/BEE2/logic/laser_receiver_center.vmf"
+				"EntityCount"		"9"
+				"BrushCount"		"5"
+				"BrushSideCount"	"34"
+				}
+			"3"
+				{
+				"Name"				"instances/BEE2/logic/laser_receiver_center.vmf"
+				"EntityCount"		"9"
+				"BrushCount"		"5"
+				"BrushSideCount"	"34"
+				}
+			"4"
+				{
+				"Name"				"instances/BEE2/logic/laser_relay_center.vmf"
+				"EntityCount"		"9"
+				"BrushCount"		"5"
+				"BrushSideCount"	"34"
+				}
+			"5"
+				{
+				"Name"				"instances/BEE2/logic/laser_relay_center.vmf"
+				"EntityCount"		"9"
+				"BrushCount"		"5"
+				"BrushSideCount"	"34"
+				}
+			}
+
+		"TargetName"		"le"
+		"Inputs"
+			{
+			"BEE2"
+				{
+				"Type"              "AND"
+				"Init"              "NONE"
+				
+				"InvertVar"         "$start_enabled"
+				"Enable_Cmd"        "laser,TurnOn,,0.00,-1"
+				"Disable_Cmd"       "laser,TurnOff,,0.00,-1"
+				
+				"Enable_Cmd"        "light,TurnOn,,0.00,-1"
+				"Disable_Cmd"       "light,TurnOff,,0.00,-1"
+				}
+			}
+		"Outputs"
+			{
+			"CONNECTION_STANDARD"
+				{
+				"Activate"		"instance:catcher;OnPowered"
+				"Deactivate"		"instance:catcher;OnUnpowered"
+				}
+			}
+		"Offset"		"64 64 64"
+		"OccupiedVoxels"
+			{
+			"Voxel"
+				{
+				"Pos"		"0 0 0"
+				"Surface"
+					{
+					"Pos"	"1 1 0"
+					}
+				"Surface"
+					{
+					"Pos"	"1 2 0"
+					}
+				"Surface"
+					{
+					"Pos"	"2 1 0"
+					}
+				"Surface"
+					{
+					"Pos"	"2 2 0"
+					}
+				}
+			}
+		"EmbeddedVoxels"
+			{
+			"Voxel"
+				{
+				"Pos"		"0 0 0"
+				}
+			}
+
+		"EmbedFace"
+			{
+			"Solid"
+				{
+				"Center"		"64 64 128"
+				"Dimensions"	"128 128 4"
+				"Grid"			"4x4"
+				}
+			}
+		"Collisions"
+			{
+			"BBox"	
+				{
+				"Type" "SOLID ANTLINE"
+				"Pos1" "-32 -32 -96"
+				"Pos2" "32 32 -64"
+				}
+			}
+
+		"ConnectionPoints"
+			{
+			// left
+			"Point"
+				{
+				"Dir"				"1 0 0"
+				"Pos"				"2 3 0"
+				"SignageOffset"		"0 2 0"
+				"Priority"  "0"
+				}
+			"Point"
+				{
+				"Dir"				"1 0 0"
+				"Pos"				"2 4 0"
+				"SignageOffset"		"0 3 0"
+				"Priority"  "0"
+				}
+
+			// right
+			"Point"
+				{
+				"Dir"				"-1 0 0"
+				"Pos"				"6 3 0"
+				"SignageOffset"		"7 2 0"
+				"Priority"  "0"
+				}
+			"Point"
+				{
+				"Dir"				"-1 0 0"
+				"Pos"				"6 4 0"
+				"SignageOffset"		"7 3 0"
+				"Priority"  "0"
+				}
+
+			// up
+			"Point"
+				{
+				"Dir"				"0 1 0"
+				"Pos"				"3 1 0"
+				"SignageOffset"		"2 0 0"
+				"Priority"  "0"
+				}
+			"Point"
+				{
+				"Dir"				"0 1 0"
+				"Pos"				"4 1 0"
+				"SignageOffset"		"5 0 0"
+				"Priority"  "0"
+				}
+
+			// down
+			"Point"
+				{
+				"Dir"				"0 -1 0"
+				"Pos"				"3 6 0"
+				"SignageOffset"		"2 5 0"
+				"Priority"  "0"
+				}
+			"Point"
+				{
+				"Dir"				"0 -1 0"
+				"Pos"				"4 6 0"
+				"SignageOffset"		"5 5 0"
+				"Priority"  "0"
+				}
+			}
+		}
+	}
