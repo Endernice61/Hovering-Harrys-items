@@ -64,6 +64,22 @@
 //	}
 //}
 "Item"
+	{
+	"ID" "ITEM_LASER_ITEM_CENTER"
+	"Description"
+		{
+		"" "Laser emitter, receiver and relay combined"
+		"" "**Cube Type** controls which type it is, respectively"
+		}
+	"Version"
+		{
+		"Styles"
+			{
+			"BEE2_CLEAN"	"laser_item"
+			}
+		}
+	}
+"Item"
 {
 	"ID"  "ITEM_VBSP_HARRYS_STUFF"
 	"NeedsUnlock" "1"
